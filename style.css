@@ -37,6 +37,13 @@ body {
 .container {
 	padding: 10px 10%;
 }
+.logo{
+	border-radius: 50%;
+	height: 60px;
+	width: 80px;
+	margin-left: 40px;
+	margin-top: 10px;
+}
 
 nav {
 	display: flex;
@@ -44,10 +51,6 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
-}
-
-.logo {
-	width: 140px;
 }
 
 nav ul li {
