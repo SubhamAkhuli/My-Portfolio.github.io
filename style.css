@@ -35,6 +35,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	box-shadow: 10px 10px 50px black;
 }
 
 nav ul li {
@@ -86,6 +87,7 @@ nav ul li a:hover::after {
 .header-text {
 	text-align: center;
 	font-size: 30px;
+	padding-top:20px;
 }
 .header-text h1:hover {
     cursor: pointer;
