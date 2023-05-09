@@ -76,7 +76,7 @@ nav ul li a:hover::after {
 .profile-pic {
 	width: 400px;
 	height: 500px;
-	border-radius: 10px;
+	border-radius: 50%;
 	cursor: pointer;
 }
 .profile-pic:hover {
