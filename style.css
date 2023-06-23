@@ -76,17 +76,17 @@ nav ul li a:hover::after {
 .profile-pic {
 	width: 400px;
 	height: 500px;
-	border-radius: 50%;
+	border-radius: 10%;
 	cursor: pointer;
+	box-shadow: 0px 20px 50px rgb(16, 16, 16);
 }
 .profile-pic:hover {
-    box-shadow:  20px 10px 30px rgb(0, 0, 0);
+	box-shadow: 0px 10px 50px rgb(29, 6, 236);
     transition: all 200ms ease-out;
 }
 .header-text {
 	text-align: center;
 	font-size: 30px;
-	padding-top:20px;
 }
 .header-text h1:hover {
     cursor: pointer;
@@ -121,10 +121,11 @@ nav ul li a:hover::after {
 .about-col-1 img {
 	width: 100%;
 	border-radius: 15px;
+	box-shadow: 10px 10px 30px rgb(16, 16, 16);
 }
 .about-col-1 img:hover {
 	cursor: pointer;
-    box-shadow: 10px 10px 30px rgb(16, 16, 16);
+    box-shadow: 10px 10px 30px rgb(49, 5, 244);
     transition: all 200ms ease-out;
 }
 
@@ -204,6 +205,7 @@ nav ul li a:hover::after {
 	transform:scale(1.1);
 	color: white;
 	box-shadow: 10px 10px 35px rgb(17, 17, 18);
+
 }
 
 #portfolio {
