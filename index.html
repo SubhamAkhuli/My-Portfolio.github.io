@@ -120,7 +120,8 @@
                         <h3>Playing Mobile Games</h3>
                         <p>Photography is the art, application, and practice of creating durable images by recording
                             light</p>
-                        <a href="https://www.instagram.com/subham_akhuli/" target="_blank"><i class="fa-solid fa-link"></i></a>
+                        <a href="https://www.instagram.com/subham_akhuli/" target="_blank"><i
+                                class="fa-solid fa-link"></i></a>
                     </div>
                 </div>
             </div>
@@ -147,9 +148,13 @@
                     <a href="Subham Akhuli_CV.pdf" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-right">
-                    <form name="submit-to-google-sheet">
+                    <form action="form.php" method="post" name ="submit-in-php">
+                        <label for="fname">Name:</label>
                         <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <label for="fname">Email-id:</label>
+                        <input type="email" name="Email" placeholder="Your Email-id" required>
+                        <label for="fname">Message:
+                        </label>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
@@ -157,10 +162,11 @@
                 </div>
             </div>
         </div>
-<div class="container-fluid">
+        <div class="container-fluid">
             <marquee behavior="scroll" direction="left"><b> Developed by Subham  Akhuli ------- Copyright © www.My-Protfolio.com. All rights reserved!</b></marquee>
           </div>
     </div>
+
 
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
@@ -183,11 +189,10 @@
             sidemenu.style.right = "-200px";
         }
     </script>
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzbtOdj4C1lbzreObsnYy9Qkv3Qak27CHCyjHYH9AgktF9GSQHqDMYd2tGH003Mt-2h/exec'
-        const form = document.forms['submit-to-google-sheet']
-        const msg = document.getElementById("msg")
-
+     <!-- <script>
+        const scriptURL='from.php'
+        const form = docoment.froms['submit-in-php'] 
+        const msg = docoment.getElementById("msg")
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -195,12 +200,33 @@
                     msg.innerHTML = "Message Sent Successfully"
                     setTimeout(function () {
                         msg.innerHTML = ""
-                    }, 5000)
+                    }, 1000)
                     form.reset()
                 })
                 .catch(error => console.error('Error!', error.message))
         })
-    </script>
+    </script> -->
+
+    <!-- <?php
+    if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="true"){
+        echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
+                  <strong>Success!</strong> you are successfully signup and  Now you can login
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>';
+      }
+      if(isset($_GET['signupsuccess']) && $_GET['signupsuccess']=="false"){
+        $showError = $_GET['error'];
+        echo ' <div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
+            <strong>Error!</strong> '. $showError.'
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div> ';
+        
+    }
+    ?> -->
 </body>
 
 </html>
