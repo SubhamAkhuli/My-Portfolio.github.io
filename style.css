@@ -198,13 +198,14 @@ nav ul li a:hover::after {
 	color: rgb(63, 13, 229);
 	border: none;
 	transition: all 200ms ease;
+	box-shadow: 5px 2px 20px rgb(16, 16, 16);
 }
 
 .view:hover {
-	background: rgb(228, 13, 13);
+	background: rgb(38, 228, 13);
 	transform:scale(1.1);
 	color: white;
-	box-shadow: 10px 10px 35px rgb(17, 17, 18);
+	box-shadow: 2px 1px 20px rgb(17, 21, 238);
 
 }
 
@@ -332,7 +333,7 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-	background: red;
+	background: rgb(84, 224, 19);
 	color: white;
 	box-shadow: 10px 10px 35px rgb(59, 17, 208);
 }
