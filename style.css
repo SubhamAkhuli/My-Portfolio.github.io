@@ -168,7 +168,6 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ol li {
-	/* list-style: none; */
 	padding: 2px 3px;
 	margin: 10px 0;
 }
@@ -428,12 +427,17 @@ nav .fa-solid {
 		cursor: pointer;
 	}
 
+	.tab-contents ol li{
+		padding: 2px 3px; 
+		margin: 5px 0;
+	}
+
 	.tab-contents ul li {
 		list-style: none;
 		margin: 5px 0;
 	}
 
-	.tab-contents ul li {
+	.tab-contents ul li , .tab-contents ol li {
 		font-size: 15px;
 	}
 
