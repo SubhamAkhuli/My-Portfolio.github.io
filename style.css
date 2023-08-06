@@ -253,6 +253,8 @@ nav ul li a:hover::after {
 	left: 0;
 	bottom: 0;
 	overflow: hidden;
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 	padding: 0 40px;
@@ -273,16 +275,19 @@ nav ul li a:hover::after {
 }
 
 .layer a {
-	margin-top: 20px;
+	margin-top: 10px;
 	color: #ff004f;
 	text-decoration: none;
 	font-size: 18px;
 	line-height: 60px;
 	background: #fff;
-	width: 60px;
-	height: 60px;
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
 	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .hobbies:hover img {
@@ -343,9 +348,10 @@ nav ul li a:hover::after {
 }
 
 .btn:hover {
-	background: rgb(84, 224, 19);
+	background: rgb(27, 242, 59);
+	/* border: 1px solid #ffffff; */
 	color: white;
-	box-shadow: 10px 10px 35px rgb(59, 17, 208);
+	box-shadow: 10px 10px 35px rgb(10, 10, 10);
 }
 
 .btn btn2 {
