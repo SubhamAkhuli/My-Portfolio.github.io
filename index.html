@@ -42,6 +42,7 @@
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             position: relative;
             overflow: hidden;
+            padding: 120px 0 60px;
         }
         
         .hero-section::before {
@@ -58,6 +59,8 @@
         .profile-img {
             border: 8px solid rgba(255, 255, 255, 0.2);
             transition: transform 0.3s ease;
+            max-width: 80%;
+            margin: 0 auto;
         }
         
         .profile-img:hover {
@@ -109,6 +112,7 @@
             border-radius: 10px;
             margin-right: 15px;
             color: white;
+            flex-shrink: 0;
         }
         
         .nav-pills .nav-link.active {
@@ -162,10 +166,22 @@
             background: var(--secondary-color);
             transform: translateY(-3px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            color: white;
         }
         
         footer {
             background: var(--text-color);
+        }
+        
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .section-padding {
+                padding: 80px 0;
+            }
+            
+            .hero-section {
+                padding: 100px 0 50px;
+            }
         }
         
         @media (max-width: 768px) {
@@ -175,6 +191,7 @@
             
             .hero-content {
                 text-align: center;
+                margin-top: 30px;
             }
             
             .profile-container {
@@ -183,11 +200,63 @@
             
             .section-title {
                 margin-bottom: 30px;
+                text-align: center;
             }
             
             .section-title::after {
                 left: 50%;
                 transform: translateX(-50%);
+            }
+            
+            .skill-item {
+                padding: 12px;
+            }
+            
+            .hero-section {
+                padding-top: 120px;
+            }
+            
+            .contact-info {
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section-padding {
+                padding: 50px 0;
+            }
+            
+            .hero-section {
+                min-height: auto;
+                padding: 100px 0 40px;
+            }
+            
+            .profile-img {
+                max-width: 200px;
+                margin-bottom: 20px;
+            }
+            
+            h1.display-4 {
+                font-size: 2rem;
+            }
+            
+            .btn-custom {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .skill-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .skill-icon {
+                margin-right: 0;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -337,7 +406,7 @@ achieve the organisation's goal with my best efforts.</p>
     <!-- Skills Section -->
     <section id="skills" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">My Skills</h2>
+            <h2 class="section-title ">My Skills</h2>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="skill-item">
@@ -434,7 +503,7 @@ achieve the organisation's goal with my best efforts.</p>
             </div>
 
             <div class="certificates mt-5">
-                <h3 class="mb-4 text-center">Certificates</h3>
+                <h3 class="mb-4 ">Certificates</h3>
                 <div class="row">
                     <div class="col-md-4 mb-4">
                         <div class="card h-100 shadow-sm">
@@ -477,7 +546,7 @@ achieve the organisation's goal with my best efforts.</p>
     <!-- Projects Section -->
     <section id="projects" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title text-center">My Projects</h2>
+            <h2 class="section-title ">My Projects</h2>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card h-100 shadow">
@@ -541,7 +610,7 @@ achieve the organisation's goal with my best efforts.</p>
     <!-- Hobbies Section -->
     <section id="hobbies" class="section-padding">
         <div class="container">
-            <h2 class="section-title text-center">My Hobbies</h2>
+            <h2 class="section-title ">My Hobbies</h2>
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card h-100 shadow overflow-hidden">
@@ -574,7 +643,7 @@ achieve the organisation's goal with my best efforts.</p>
     <!-- Contact Section -->
     <section id="contact" class="section-padding bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Contact Me</h2>
+            <h2 class="section-title ">Contact Me</h2>
             <div class="row g-4">
                 <div class="col-lg-5">
                     <div class="contact-info">
