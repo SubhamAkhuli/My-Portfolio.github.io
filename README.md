@@ -51,7 +51,6 @@ The contact form uses EmailJS to send emails without a backend server. To set up
 1. Register at [EmailJS](https://www.emailjs.com/)
 2. Connect your email service (Gmail, Outlook, etc.)
 3. Create an email template
-4. Update the service ID (`service_ralqiu8`) and template ID (`template_7tz923v`) in the JavaScript code
 
 ## Browser Compatibility
 - Chrome, Firefox, Safari, Edge (latest versions)
