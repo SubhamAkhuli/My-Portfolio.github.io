@@ -12,254 +12,7 @@
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/958e8a374f.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <style>
-        :root {
-            --primary-color: #4361ee;
-            --secondary-color: #3f37c9;
-            --accent-color: #f72585;
-            --text-color: #2b2d42;
-            --light-bg: #f8f9fa;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: var(--text-color);
-            overflow-x: hidden;
-        }
-        
-        .section-padding {
-            padding: 100px 0;
-        }
-        
-        .navbar {
-            transition: all 0.3s ease;
-        }
-        
-        .hero-section {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            position: relative;
-            overflow: hidden;
-            padding: 120px 0 60px;
-        }
-        
-        .hero-section::before {
-            content: "";
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            top: -150px;
-            right: -150px;
-        }
-        
-        .profile-img {
-            border: 8px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-            max-width: 80%;
-            margin: 0 auto;
-        }
-        
-        .profile-img:hover {
-            transform: scale(1.05);
-        }
-        
-        .section-title {
-            position: relative;
-            margin-bottom: 50px;
-            font-weight: 700;
-        }
-        
-        .section-title::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-        }
-        
-        .card {
-            border: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .skill-item {
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            background: white;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            align-items: center;
-        }
-        
-        .skill-icon {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            margin-right: 15px;
-            color: white;
-            flex-shrink: 0;
-        }
-        
-        .nav-pills .nav-link.active {
-            background-color: var(--primary-color);
-        }
-        
-        .social-icons a {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            background-color: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-        }
-        
-        .contact-card {
-            border-radius: 15px;
-            overflow: hidden;
-        }
-        
-        .contact-form .form-control {
-            padding: 12px 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            border: 1px solid #e1e1e1;
-            transition: all 0.3s ease;
-        }
-        
-        .contact-form .form-control:focus {
-            box-shadow: none;
-            border-color: var(--primary-color);
-        }
-        
-        .btn-custom {
-            background: var(--primary-color);
-            color: white;
-            border-radius: 50px;
-            padding: 12px 30px;
-            transition: all 0.3s ease;
-            border: none;
-        }
-        
-        .btn-custom:hover {
-            background: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            color: white;
-        }
-        
-        footer {
-            background: var(--text-color);
-        }
-        
-        /* Enhanced Mobile Responsiveness */
-        @media (max-width: 992px) {
-            .section-padding {
-                padding: 80px 0;
-            }
-            
-            .hero-section {
-                padding: 100px 0 50px;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .section-padding {
-                padding: 60px 0;
-            }
-            
-            .hero-content {
-                text-align: center;
-                margin-top: 30px;
-            }
-            
-            .profile-container {
-                margin-bottom: 30px;
-            }
-            
-            .section-title {
-                margin-bottom: 30px;
-                text-align: center;
-            }
-            
-            .section-title::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .skill-item {
-                padding: 12px;
-            }
-            
-            .hero-section {
-                padding-top: 120px;
-            }
-            
-            .contact-info {
-                margin-bottom: 30px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .section-padding {
-                padding: 50px 0;
-            }
-            
-            .hero-section {
-                min-height: auto;
-                padding: 100px 0 40px;
-            }
-            
-            .profile-img {
-                max-width: 200px;
-                margin-bottom: 20px;
-            }
-            
-            h1.display-4 {
-                font-size: 2rem;
-            }
-            
-            .btn-custom {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-            
-            .social-icons {
-                justify-content: center;
-            }
-            
-            .skill-item {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .skill-icon {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -313,8 +66,7 @@
             <div class="row">
                 <div class="col-lg-6">
                     <h2 class="section-title">About Me</h2>
-                    <p class="lead mb-4">To Work with a Rapidly Growing Organization with a dynamic and challenging environment to
-achieve the organisation's goal with my best efforts.</p>
+                    <p class="lead mb-4">Motivated and passionate Web Developer with experience in building responsive, dynamic web applications using ReactJS, NodeJS, PHP, and MongoDB. Skilled in both frontend and backend development, with a strong foundation in OOP, databases, and web technologies. Eager to contribute to innovative development teams and grow as a full-stack developer.</p>
                     
                     <div class="education-timeline mt-5">
                         <h3 class="mb-4">Education</h3>
@@ -324,8 +76,8 @@ achieve the organisation's goal with my best efforts.</p>
                                     <i class="fas fa-graduation-cap fs-3 text-primary"></i>
                                 </div>
                                 <div>
-                                    <h5 class="mb-1">B.tech in Computer Science Engineering</h5>
-                                    <p class="text-muted mb-0">Meghnad Saha Institute of Technology | 2020-2024</p>
+                                    <h5 class="mb-1">Bachelor of Computer Science and Engineering</h5>
+                                    <p class="text-muted mb-0">Meghnad Saha Institute Of Technology, MAKAUT | 2020-2024</p>
                                     <p class="text-muted mb-0">C.G.P.A - 8.74</p>
                                 </div>
                             </div>
@@ -336,7 +88,7 @@ achieve the organisation's goal with my best efforts.</p>
                                     <i class="fas fa-school fs-3 text-primary"></i>
                                 </div>
                                 <div>
-                                    <h5 class="mb-1">Higher Secondary (XII)</h5>
+                                    <h5 class="mb-1">Higher Secondary Education (WBCHSE)</h5>
                                     <p class="text-muted mb-0">Bankura Municipal High School | 2018-2020</p>
                                     <p class="text-muted mb-0">Grade - 86.8%</p>
                                 </div>
@@ -348,8 +100,8 @@ achieve the organisation's goal with my best efforts.</p>
                                     <i class="fas fa-school fs-3 text-primary"></i>
                                 </div>
                                 <div>
-                                    <h5 class="mb-1">Secondary (X)</h5>
-                                    <p class="text-muted mb-0">Beliatore High School | 2018</p>
+                                    <h5 class="mb-1">Secondary Education (WBBSE)</h5>
+                                    <p class="text-muted mb-0">Beliatorel High School | 2018</p>
                                     <p class="text-muted mb-0">Grade - 84.71%</p>
                                 </div>
                             </div>
@@ -382,7 +134,6 @@ achieve the organisation's goal with my best efforts.</p>
                                 <div>
                                     <h5 class="mb-1">Martian Internship Program</h5>
                                     <p class="text-muted mb-2">Persistent System | Jun 2023 – Aug 2023</p>
-                                    <a href="https://drive.google.com/file/d/19z0IAHYNYmcwS-sUxoUFY_k3j-oAuI_r/view?usp=sharing" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">View Certificate</a>
                                 </div>
                             </div>
                         </div>
@@ -394,7 +145,6 @@ achieve the organisation's goal with my best efforts.</p>
                                 <div>
                                     <h5 class="mb-1">Winter Industrial Training</h5>
                                     <p class="text-muted mb-2">Jan 2021 – Feb 2021</p>
-                                    <a href="https://drive.google.com/file/d/1WeNKX7JoPj0lN_dvQUR9jaga9-PCu_8S/view?usp=sharing" target="_blank" class="btn btn-sm btn-outline-primary rounded-pill">View Certificate</a>
                                 </div>
                             </div>
                         </div>
@@ -411,24 +161,35 @@ achieve the organisation's goal with my best efforts.</p>
             <div class="row">
                 <div class="col-lg-6">
                     <div class="skill-item">
-                        <div class="skill-icon" style="background-color: #777BB4;">
-                            <i class="fa-brands fa-php"></i>
+                        <div class="skill-icon" style="background-color: #61DBFB;">
+                            <i class="fa-brands fa-react"></i>
                         </div>
                         <div>
-                            <h5 class="mb-0">PHP</h5>
+                            <h5 class="mb-0">ReactJS</h5>
                             <div class="progress mt-2" style="height: 6px;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #777BB4;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #61DBFB;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
                     <div class="skill-item">
-                        <div class="skill-icon" style="background-color: #4CAF50;">
-                            <i class="fa-brands fa-python"></i>
+                        <div class="skill-icon" style="background-color: #68A063;">
+                            <i class="fa-brands fa-node-js"></i>
                         </div>
                         <div>
-                            <h5 class="mb-0">Python</h5>
+                            <h5 class="mb-0">NodeJS</h5>
                             <div class="progress mt-2" style="height: 6px;">
-                                <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #4CAF50;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #68A063;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon" style="background-color: #F7DF1E;">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">JavaScript</h5>
+                            <div class="progress mt-2" style="height: 6px;">
+                                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #F7DF1E;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -454,27 +215,27 @@ achieve the organisation's goal with my best efforts.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-item">
-                        <div class="skill-icon" style="background-color: #F7DF1E;">
-                            <i class="fa-brands fa-js"></i>
-                        </div>
-                        <div>
-                            <h5 class="mb-0">JavaScript</h5>
-                            <div class="progress mt-2" style="height: 6px;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #F7DF1E;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="skill-item">
-                        <div class="skill-icon" style="background-color: #21759B;">
-                            <i class="fa-brands fa-wordpress"></i>
-                        </div> 
+                        <div class="skill-icon" style="background-color: #4CAF50;">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
                         <div>
-                            <h5 class="mb-0">WordPress</h5>
+                            <h5 class="mb-0">Python</h5>
                             <div class="progress mt-2" style="height: 6px;">
-                                <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #21759B;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar" role="progressbar" style="width: 70%; background-color: #4CAF50;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-icon" style="background-color: #EF4223;">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <div>
+                            <h5 class="mb-0">MongoDB</h5>
+                            <div class="progress mt-2" style="height: 6px;">
+                                <div class="progress-bar" role="progressbar" style="width: 80%; background-color: #4DB33D;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -525,6 +286,39 @@ achieve the organisation's goal with my best efforts.</p>
                                     <h5 class="mb-0">Python (Basic) from HackerRank </h5>
                                 </div>
                                 <a href="https://www.hackerrank.com/certificates/ae2152f5e55a" target="_blank" class="btn btn-outline-primary w-100 mt-3">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-certificate text-warning me-3 fs-3"></i>
+                                    <h5 class="mb-0">MongoDB Basics - Great Learning</h5>
+                                </div>
+                                <a href="https://drive.google.com/file/d/1hTywjrS71Bw9wneOmxdMc8t-N-3o_yft/view?usp=sharing" target="_blank" class="btn btn-outline-primary w-100 mt-3">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-certificate text-warning me-3 fs-3"></i>
+                                    <h5 class="mb-0">Node Js - Great Learning</h5>
+                                </div>
+                                <a href="https://drive.google.com/file/d/1Mnnsjrn5iW6VymZvI6s99GY8uoZ9MraP/view?usp=sharing" target="_blank" class="btn btn-outline-primary w-100 mt-3">View Certificate</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="fas fa-certificate text-warning me-3 fs-3"></i>
+                                    <h5 class="mb-0">React Js - Great Learning</h5>
+                                </div>
+                                <a href="https://drive.google.com/file/d/1yKAu5VxqfibDCR0MNFMU2zGKHWxp6KE3/view?usp=sharing" target="_blank" class="btn btn-outline-primary w-100 mt-3">View Certificate</a>
                             </div>
                         </div>
                     </div>
@@ -596,8 +390,25 @@ achieve the organisation's goal with my best efforts.</p>
                 <div class="col-md-4">
                     <div class="card h-100 shadow">
                         <div class="card-body p-4">
+                            <h4 class="card-title fw-bold text-primary mb-3">Ecommerce Website</h4>
+                            <p class="card-text">A full-stack online shopping platform with product listings, search, filters, secure checkout, user authentication, and integrated customer support for a smooth buying experience.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary me-1">ReactJS</span>
+                                <span class="badge bg-primary me-1">NodeJS</span>
+                                <span class="badge bg-primary me-1">ExpressJs</span>
+                                <span class="badge bg-primary me-1">MongoDB</span>
+                            </div>
+                            <a href="#" target="_blank" class="btn btn-outline-primary rounded-pill">
+                                <i class="fas fa-external-link-alt me-2"></i> Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body p-4">
                             <h4 class="card-title fw-bold text-primary mb-3">Doctor's Appointment Booking System</h4>
-                            <p class="card-text">This PHP-based web application for booking medical appointments. Patients can use the platform to easily schedule appointments with their doctors.</p>
+                            <p class="card-text">A PHP-based web app that lets patients easily book, manage, and track medical appointments with doctors, improving clinic scheduling efficiency.</p>
                             <div class="mb-3">
                                 <span class="badge bg-primary me-1">PHP</span>
                                 <span class="badge bg-primary me-1">HTML</span>
@@ -615,7 +426,7 @@ achieve the organisation's goal with my best efforts.</p>
                     <div class="card h-100 shadow">
                         <div class="card-body p-4">
                             <h4 class="card-title fw-bold text-primary mb-3">Discussion Forum</h4>
-                            <p class="card-text">It's a website where you can ask problems, offer your solutions, and expand your knowledge.</p>
+                            <p class="card-text">A responsive platform for users to post questions, share solutions, and engage in knowledge exchange across various topics, fostering a collaborative learning space.</p>
                             <div class="mb-3">
                                 <span class="badge bg-primary me-1">PHP</span>
                                 <span class="badge bg-primary me-1">HTML</span>
@@ -634,15 +445,14 @@ achieve the organisation's goal with my best efforts.</p>
                     <div class="card h-100 shadow">
                         <div class="card-body p-4">
                             <h4 class="card-title fw-bold text-primary mb-3">NoteBook</h4>
-                            <p class="card-text">A note-taking website where you can make an important note and also you can edit and delete it.</p>
+                            <p class="card-text">A cloud-based note-taking app where users can create, edit, and delete personal notes securely, boosting productivity and organization.</p>
                             <div class="mb-3">
-                                <span class="badge bg-primary me-1">PHP</span>
-                                <span class="badge bg-primary me-1">HTML</span>
-                                <span class="badge bg-primary me-1">CSS</span>
-                                <span class="badge bg-primary me-1">JavaScript</span>
-                                <span class="badge bg-primary">MySQL</span>
+                                <span class="badge bg-primary me-1">ReactJS</span>
+                                <span class="badge bg-primary me-1">NodeJS</span>
+                                <span class="badge bg-primary me-1">ExpressJs</span>
+                                <span class="badge bg-primary">MongoDB</span>
                             </div>
-                            <a href="https://github.com/SubhamAkhuli/Note-taking-webpage" target="_blank" class="btn btn-outline-primary rounded-pill">
+                            <a href="#" target="_blank" class="btn btn-outline-primary rounded-pill">
                                 <i class="fab fa-github me-2"></i> View Project
                             </a>
                         </div>
@@ -651,16 +461,14 @@ achieve the organisation's goal with my best efforts.</p>
                 <div class="col-md-4">
                     <div class="card h-100 shadow">
                         <div class="card-body p-4">
-                            <h4 class="card-title fw-bold text-primary mb-3">Weather App</h4>
-                            <p class="card-text">A real-time weather application that fetches and displays current weather data from Rapid API.</p>
+                            <h4 class="card-title fw-bold text-primary mb-3">News Website</h4>
+                            <p class="card-text">A sleek and dynamic news portal that delivers real-time updates across global topics, providing readers with concise and diverse news coverage.</p>
                             <div class="mb-3">
-                                <span class="badge bg-primary me-1">HTML</span>
-                                <span class="badge bg-primary me-1">CSS</span>
-                                <span class="badge bg-primary me-1">JavaScript</span>
-                                <span class="badge bg-primary">API</span>
+                                <span class="badge bg-primary me-1">ReactJS</span>
+                                <span class="badge bg-primary me-1">Rest Api</span>
                             </div>
-                            <a href="https://subhamakhuli.github.io/Weather-App/" target="_blank" class="btn btn-outline-primary rounded-pill">
-                                <i class="fas fa-external-link-alt me-2"></i> Live Demo
+                            <a href="#" target="_blank" class="btn btn-outline-primary rounded-pill">
+                                <i class="fab fa-github me-2"></i> View Project
                             </a>
                         </div>
                     </div>
